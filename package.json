@@ -1,6 +1,7 @@
 {
   "name": "kadir-lokmaci",
   "version": "0.1.0",
+  "homepage": "https://ahmetcankurt.github.io/tatlicikadirusta/",
   "private": true,
   "dependencies": {
     "@coreui/coreui": "^5.2.0",
