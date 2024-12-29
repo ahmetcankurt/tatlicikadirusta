@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 768px) {
   .header_title {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   .header {
     display: flex;
@@ -42,6 +42,6 @@
     align-items: center;
   }
   .social {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }

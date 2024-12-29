@@ -17,6 +17,23 @@
   flex: 1;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+}
+
+.slider-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .slider-btn {
@@ -48,9 +65,17 @@
 
 @media screen and (max-width: 768px) {
   .slider-container {
-    height: 300px;
+    height: 400px;
   }
   .slider-image {
     margin: 0 2px;
+  }
+  .slider-title {
+    font-size: 18px;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

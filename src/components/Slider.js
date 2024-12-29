@@ -60,12 +60,16 @@ const Slider = ({ interval = 3000 }) => {
         <div
           className="slider-image"
           style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
-        ></div>
+        >
+          <div className="slider-title">{slides[currentIndex].title}</div>
+        </div>
         {!isMobile && (
           <div
             className="slider-image"
             style={{ backgroundImage: `url(${slides[(currentIndex + 1) % slides.length].image})` }}
-          ></div>
+          >
+            <div className="slider-title">{slides[(currentIndex + 1) % slides.length].title}</div>
+          </div>
         )}
       </div>
       <button
