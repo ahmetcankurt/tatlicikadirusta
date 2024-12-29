@@ -1,0 +1,47 @@
+.header {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  background-color: #ff684a;
+  color: white;
+  padding-bottom: 6px;
+}
+
+.header_bottom {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.header_social {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+.header_name {
+  font-size: 24px;
+  color: white;
+}
+
+
+.header_title {
+  display: inline-block;
+  font-size: 3rem; /* Yazı boyutunu ayarlayın */
+  font-weight: bold;
+  padding: 0px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .header_title {
+    font-size: 1.5rem;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social {
+    font-size: 1.5rem;
+  }
+}

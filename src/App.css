@@ -1,0 +1,23 @@
+
+
+.footer {
+  background-color: #dc143c ;
+  color: rgb(207, 212, 223);
+  text-align: center;
+  padding: 60px 0px;
+  font-size: 14px;
+}
+
+.footer_social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer_text  {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  font-weight: bold;
+}
+

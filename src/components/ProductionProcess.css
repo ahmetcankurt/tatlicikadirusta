@@ -1,0 +1,30 @@
+.product-process {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.product-block {
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-image {
+  width: 100%;
+  max-width:  auto;
+  border-radius: 8px;
+}
+
+.product-info {
+  padding-left: 20px;
+}
+

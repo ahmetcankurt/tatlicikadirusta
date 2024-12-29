@@ -1,0 +1,18 @@
+.products {
+  padding: 20px; /* Varsayılan padding */
+  margin-bottom: 0; /* Varsayılan margin-bottom */
+}
+
+.products-text {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #dc143c;
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    margin-bottom: 20px; /* Daha geniş ekranlar için margin-bottom kullanılmaz */
+  }
+}
