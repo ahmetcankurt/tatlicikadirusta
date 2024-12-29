@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1ca4c07a.css",
+    "main.js": "/static/js/main.98a11a49.js",
+    "static/js/488.33ffb430.chunk.js": "/static/js/488.33ffb430.chunk.js",
+    "static/media/tatliresimleri2.webp": "/static/media/tatliresimleri2.2e39b943f4ef61dbbb6d.webp",
+    "static/media/tatliresimleri3.webp": "/static/media/tatliresimleri3.29776a6b6d98653c2f34.webp",
+    "static/media/tatliresimleri4.webp": "/static/media/tatliresimleri4.691d76f7197a60110969.webp",
+    "static/media/tatliresimleri6.webp": "/static/media/tatliresimleri6.714f3b11ca08db71ad2a.webp",
+    "static/media/ustaresim.webp": "/static/media/ustaresim.5a359710ebe1492cb89d.webp",
+    "static/media/tatliresimleri9.webp": "/static/media/tatliresimleri9.1b04983b0ebc33b14cb3.webp",
+    "static/media/tatliresimleri1.webp": "/static/media/tatliresimleri1.c9f3a23128c3ec7af841.webp",
+    "static/media/tatliresimleri5.webp": "/static/media/tatliresimleri5.6438e5cc3fec965204e4.webp",
+    "static/media/tatliresimleri7.webp": "/static/media/tatliresimleri7.dc824f013c3d17b39a3a.webp",
+    "static/media/tatliresimleri10.webp": "/static/media/tatliresimleri10.8f8b21b87f0e0611ea8b.webp",
+    "static/media/tatliresimleri8.webp": "/static/media/tatliresimleri8.4af15b4ac653b17be6a7.webp",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.1ca4c07a.css.map": "/static/css/main.1ca4c07a.css.map",
+    "main.98a11a49.js.map": "/static/js/main.98a11a49.js.map",
+    "488.33ffb430.chunk.js.map": "/static/js/488.33ffb430.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ca4c07a.css",
+    "static/js/main.98a11a49.js"
+  ]
+}
