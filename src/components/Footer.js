@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // İkonları import ettik
+import "./Footer.css"; // Footer bileşenine ait stilleri import ettik
 
 function Footer() {
   return (

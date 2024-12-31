@@ -8,11 +8,9 @@ import Map from "./components/Map";
 import WhatsappButton from "./components/WhatsappButton";
 import Header from "./components/Header";
 import About from "./components/About";
-import "./App.css";
 import ProductionProcess from "./components/ProductionProcess";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
-import Logo from "./image/lokma.png";
 import LoadinContainerJS from "./components/LoadinContainer";
 
 function App() {
