@@ -5,6 +5,7 @@
   margin: auto;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .slider-slide {
@@ -65,10 +66,11 @@
 
 @media screen and (max-width: 768px) {
   .slider-container {
-    height: 400px;
+    height: 75vh;
   }
   .slider-image {
     margin: 0 2px;
+    object-fit:  contain;
   }
   .slider-title {
     font-size: 18px;

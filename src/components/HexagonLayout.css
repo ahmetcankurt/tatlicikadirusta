@@ -1,0 +1,26 @@
+.hexagon {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.rotated {
+  transform: rotate(90deg);
+}
+
+.hexagon .hexagon_two {
+  padding-left: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon_three {
+  padding-left: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}

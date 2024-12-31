@@ -8,7 +8,6 @@ function Header() {
       <div className="header">
         <h1 className="header_title">LOKMACI KADİR USTA</h1>
         <div className="header_bottom">
-          <span className="header_name"></span>
           <a href="tel:+0905323331347" className="social">
             <FaPhoneAlt />
           </a>

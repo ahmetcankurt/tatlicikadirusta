@@ -1,7 +1,7 @@
 .header {
   font-family: "Playfair Display", serif;
   text-align: center;
-  background-color: #ff684a;
+  background-color: white;
   color: white;
   padding-bottom: 6px;
 }
@@ -10,38 +10,35 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+  color: black;
 }
 
-.header_social {
-  display: flex;
-  gap: 20px;
-  text-align: center;
-}
 
-.header_name {
-  font-size: 24px;
-  color: white;
+.social {
+  font-size: 1.5rem;
+  color: black;
 }
-
 
 .header_title {
   display: inline-block;
   font-size: 3rem; /* Yazı boyutunu ayarlayın */
   font-weight: bold;
+  margin-top:  10px;
   padding: 0px;
-  color: white;
+  color: #f4a261; 
 }
 
 @media screen and (max-width: 768px) {
   .header_title {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
   .header {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
+    /* padding-bottom: 0px; */
   }
   .social {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
