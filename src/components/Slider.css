@@ -23,8 +23,6 @@
 
 .slider-title {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
   color: white;
   font-size: 24px;
   font-weight: bold;
@@ -34,7 +32,7 @@
   text-align: center;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
 }
 
 .slider-btn {
@@ -66,7 +64,7 @@
 
 @media screen and (max-width: 768px) {
   .slider-container {
-    height: 75vh;
+    height: 60vh;
   }
   .slider-image {
     margin: 0 2px;
@@ -78,6 +76,6 @@
     text-align: center;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 0;
   }
 }
