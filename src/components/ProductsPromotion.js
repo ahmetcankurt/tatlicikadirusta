@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from "react";
+import React, {  useEffect, memo } from "react";
 import "./ProductsPromotion.css";
 import AOS from "aos"; // AOS kütüphanesini import et
 import "aos/dist/aos.css"; // AOS CSS dosyasını import et

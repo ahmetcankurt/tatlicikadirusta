@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // İkonları import ettik
 import Slider from "./components/Slider";
 import ProductsPromotion from "./components/ProductsPromotion";
 import Sale from "./components/Sale";
@@ -11,8 +10,10 @@ import Header from "./components/Header";
 import About from "./components/About";
 import "./App.css";
 import ProductionProcess from "./components/ProductionProcess";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Logo from "./image/lokma.png";
+import LoadinContainerJS from "./components/LoadinContainer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +22,7 @@ function App() {
     // Sayfa yüklendiğinde loading durumunu kapat
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Yüklenme süresi (örnek: 2 saniye)
+    }, 1000); // Yüklenme süresi (örnek: 2 saniye)
 
     return () => clearTimeout(timer);
   }, []);
@@ -29,22 +30,7 @@ function App() {
   return (
     <>
       {isLoading ? (
-        <div className="loading-container">
-          <div className="spinner"></div>
-          <p>Yükleniyor...</p>
-          <p className="wave-text">
-            {"Lokmacı Kadir Usta".split("").map((char, index) => (
-              <span
-                key={index}
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </span>
-            ))}
-          </p>
-        </div>
+        <LoadinContainerJS />
       ) : (
         <>
           <Header />
@@ -67,38 +53,11 @@ function App() {
           <Container>
             <ProductionProcess />
           </Container>
-          <Container paddingBottom={0}>
+          <Container>
             <Map />
           </Container>
-
           <WhatsappButton />
-          <footer>
-            <div className="footer">
-              <div className="footer_social">
-                <a
-                  href="https://www.instagram.com/antalyahayirlokmacisi/"
-                  className="social"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://www.facebook.com/antalyahayirlokmacisi"
-                  className="social"
-                >
-                  <FaFacebook />
-                </a>
-                <a
-                  href="https://twitter.com/antalyahayirlokmacisi"
-                  className="social"
-                >
-                  <FaTwitter />
-                </a>
-              </div>
-              <p className="footer_text">
-                © 2025 Antalya Hayır Lokmacısı. Tüm hakları saklıdır.
-              </p>
-            </div>
-          </footer>
+          <Footer />
         </>
       )}
     </>
