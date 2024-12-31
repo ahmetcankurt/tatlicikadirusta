@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tatlicikadirusta/static/css/main.1c8515cd.css",
+    "main.css": "/tatlicikadirusta/static/css/main.8a0623f8.css",
     "main.js": "/tatlicikadirusta/static/js/main.b76ce5d3.js",
     "static/js/488.33ffb430.chunk.js": "/tatlicikadirusta/static/js/488.33ffb430.chunk.js",
     "static/media/tatliresimleri2.webp": "/tatlicikadirusta/static/media/tatliresimleri2.2e39b943f4ef61dbbb6d.webp",
@@ -19,12 +19,12 @@
     "static/media/slick.ttf": "/tatlicikadirusta/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/tatlicikadirusta/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/tatlicikadirusta/index.html",
-    "main.1c8515cd.css.map": "/tatlicikadirusta/static/css/main.1c8515cd.css.map",
+    "main.8a0623f8.css.map": "/tatlicikadirusta/static/css/main.8a0623f8.css.map",
     "main.b76ce5d3.js.map": "/tatlicikadirusta/static/js/main.b76ce5d3.js.map",
     "488.33ffb430.chunk.js.map": "/tatlicikadirusta/static/js/488.33ffb430.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c8515cd.css",
+    "static/css/main.8a0623f8.css",
     "static/js/main.b76ce5d3.js"
   ]
 }
