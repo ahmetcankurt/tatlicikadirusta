@@ -35,6 +35,7 @@ function ProductProcess() {
         "Soğuma ve servisi"
       ]
     },
+    
     // Diğer ürünler eklenebilir
   ];
 

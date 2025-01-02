@@ -37,6 +37,9 @@ function App() {
             <ProductsPromotion />
           </Container>
           <Container>
+            <Gallery />
+          </Container>
+          <Container>
             <Sale />
           </Container>
           <Container>
@@ -45,15 +48,13 @@ function App() {
           <Container>
             <About />
           </Container>
-          <Container>
-            <Gallery />
-          </Container>
+          
           <Container>
             <ProductionProcess />
           </Container>
-          <Container>
+          {/* <Container>
             <Map />
-          </Container>
+          </Container> */}
           <WhatsappButton />
           <Footer />
         </>

@@ -1,28 +1,39 @@
 import React, {  useEffect, memo } from "react";
 import "./ProductsPromotion.css";
+import LokmaResmi from "../image/kadirurun/LokmaResmi.jpeg"
 import AOS from "aos"; // AOS kütüphanesini import et
 import "aos/dist/aos.css"; // AOS CSS dosyasını import et
 
 function ProductsPromotion() {
   const products = [
     {
-      title: "Ürün 1",
-      description: "Ürün açıklaması 1",
+      title: "Saray Lokma",
+      description: "Mayalı Şekerli Yağlı Hamur",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 2",
-      description: "Ürün açıklaması 2",
+      title: "İzmir Lokma",
+      description: "Mayalı Şekerli Yağlı Hamur",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 3",
-      description: "Ürün açıklaması 3",
+      title: "Tulumba",
+      description: "Şekerli Yumurtalı Hamur",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 4",
-      description: "Ürün açıklaması 4",
+      title: "Halka Tatlısı",
+      description: "Şekerli Yumurtalı Hamur",
+      imgUrl: "https://via.placeholder.com/150",
+    },
+    {
+      title: "Pişi",
+      description: "Şekerli Yumurtalı Hamur",
+      imgUrl: "https://via.placeholder.com/150",
+    },
+    {
+      title: "Aşure",
+      description: "Buğday Nohut Kuru fasulye Şeker Su",
       imgUrl: "https://via.placeholder.com/150",
     },
   ];
@@ -38,7 +49,7 @@ function ProductsPromotion() {
         <h2 className="blok_title">~ Ürünlerimiz ~</h2>
         {products.map((product, index) => (
           <div
-            className="col-md-3  products"
+            className="col-md-4  products"
             key={index}
             data-aos="flip-left"
             data-aos-delay={index * 100}
@@ -51,7 +62,7 @@ function ProductsPromotion() {
               />
               <div className="card-body text-center">
                 <h5 className="card-title">{product.title}</h5>
-                <p className="card-text">{product.description}</p>
+                {/* <p className="card-text">{product.description}</p> */}
               </div>
             </div>
           </div>

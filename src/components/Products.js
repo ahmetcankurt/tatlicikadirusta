@@ -3,48 +3,42 @@ import AOS from "aos"; // AOS kütüphanesini import et
 import "./Products.css";
 
 function Product() {
-  const products = [
+  const products = 
+  [
     {
-      title: "Ürün 1",
-      description: "150 TL",
+      title: "Saray Lokma",
+      description: "300 ~ 500 ~ 1000 ~ 1500",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 2",
-      description: "250 TL",
+      title: "İzmir Lokma",
+      description: "300 ~ 500 ~ 1000 ~ 1500",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 3",
-      description: "100 TL",
+      title: "Tulumba",
+      description: "300 ~ 500 ~ 1000 ~ 1500",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 4",
-      description: "120 TL",
+      title: "Halka Tatlısı",
+      description: "300 ~ 500 ~ 1000 ~ 1500",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 4",
-      description: "120 TL",
+      title: "Pişi",
+      description: "300 ~ 500 ~ 1000 ~ 1500",
       imgUrl: "https://via.placeholder.com/150",
     },
     {
-      title: "Ürün 4",
-      description: "120 TL",
+      title: "Aşure",
+      description: "300 ~ 500 ~ 1000 ~ 1500",
       imgUrl: "https://via.placeholder.com/150",
     },
-    {
-      title: "Ürün 4",
-      description: "120 TL",
-      imgUrl: "https://via.placeholder.com/150",
-    },
-    {
-      title: "Ürün 4",
-      description: "120 TL",
-      imgUrl: "https://via.placeholder.com/150",
-    },
+  
+   
   ];
+  
 
   useEffect(() => {
     AOS.init(); // AOS kütüphanesini başlat
@@ -56,7 +50,7 @@ function Product() {
       <div className="row ">
         <h2 className="blok_title">~ Sizler İçin ~</h2>
         {products.map((product, index) => (
-          <div className="col-md-3 products" key={index}>
+          <div className="col-md-4 products" key={index}>
             <div style={{ border: "1px solid gray" }}
               // data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               data-aos="fade-right"
@@ -69,7 +63,8 @@ function Product() {
               />
               <div className="card-body text-center">
                 <h5 className="card-title">{product.title}</h5>
-                <p className="products-text">{product.description}</p>
+                <p className="products-text p-0 m-0">{product.description}</p>
+                <p className="products-text p-0 m-0">Porsiyon</p>
               </div>
             </div>
           </div>
