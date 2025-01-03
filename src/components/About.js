@@ -7,11 +7,14 @@ function About() {
     <div className="container">
       <div className="row">
         <h2 className="blok_title" data-aos="fade-up">~ Hakkımızda ~</h2>
-        <div className="col-md-6">
-          <img src={UstaResim} className="img-fluid" alt="Hakkımızda"  data-aos="fade-up-right" loading="lazy"/>
+        <div className="col-md-6" 
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        >
+          <img src={UstaResim} className="img-fluid" alt="Hakkımızda"   loading="lazy"/>
         </div>
-        <div className="col-md-6">
-          <p className="about-text" data-aos="fade-up-left">
+        <div className="col-md-6" data-aos="fade-up-right">
+          <p className="about-text" >
             Kadir Usta, okul hayatından iş yaşamına uzanan yolculuğunda
             hayalindeki mesleğe 2011 yılında adım atmıştır. Uzun yıllar boyunca
             mesleğinin çıraklığını yaparak kendini geliştirmiş ve çeşitli unlu

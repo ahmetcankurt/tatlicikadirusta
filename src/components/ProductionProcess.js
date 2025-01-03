@@ -4,7 +4,7 @@ import './ProductionProcess.css'; // Stil dosyasını import edelim
 function ProductProcess() {
   const products = [
     {
-      name: "Tatlı 1",
+      name: "YAKINDA EKLENECEK",
       images: [
         "https://via.placeholder.com/150",
         "https://via.placeholder.com/150",
@@ -19,30 +19,12 @@ function ProductProcess() {
         "Sunum ve servis"
       ]
     },
-    {
-      name: "Tatlı 2",
-      images: [
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150",
-        "https://via.placeholder.com/150"
-      ],
-      description: "Tatlı 2'nin yapım aşamaları burada açıklanır.",
-      steps: [
-        "Şekerin eritilmesi",
-        "Karıştırma işlemi",
-        "Kalıba dökülmesi",
-        "Soğuma ve servisi"
-      ]
-    },
-    
-    // Diğer ürünler eklenebilir
   ];
 
   return (
     <div className="product-process">
-      <h2 className="blok_title">~ Ürün Yapım Aşamaları ~</h2>
-      <div className="container">
+      <h2 className="blok_title"  data-aos="fade-down">~ Ürün Yapım Aşamaları ~</h2>
+      <div className="container"  data-aos="fade-up">
         <div className="row">
           {products.map((product, index) => (
             <div key={index} className="col-md-12 product-block">
@@ -71,6 +53,8 @@ function ProductProcess() {
           ))}
         </div>
       </div>
+
+      <span className='ucnokta'  data-aos="fade-up">. . .</span>
     </div>
   );
 }

@@ -42,19 +42,19 @@ function App() {
           {/* <Container>
             <Sale />
           </Container> */}
-          <Container>
+          {/* <Container>
             <Product />
-          </Container>
+          </Container> */}
           <Container>
             <About />
           </Container>
           
-          {/* <Container>
+          <Container>
             <ProductionProcess />
-          </Container> */}
-          {/* <Container>
+          </Container>
+          <Container>
             <Map />
-          </Container> */}
+          </Container>
           <WhatsappButton />
           <Footer />
         </>

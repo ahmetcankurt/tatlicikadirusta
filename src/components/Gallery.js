@@ -97,17 +97,19 @@ const Gallery = () => {
           >
             {item.type === "image" ? (
               <img
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
                 src={item.src}
                 alt={`media-${index}`}
                 className="gallery-image"
-                data-aos="fade-right"
                 loading="lazy"
               />
             ) : (
               <video
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
                 src={item.src}
                 className="gallery-video"
-                data-aos="fade-right"
                 controls
                 loading="lazy"
                 muted
@@ -118,26 +120,25 @@ const Gallery = () => {
       </div>
 
       {selectedMedia && (
-  <div className="modal" onClick={closeModal}>
-    <div className="modal-content">
-      {selectedMedia.type === "image" ? (
-        <img
-          src={selectedMedia.src}
-          alt="Selected"
-          className="modal-image"
-        />
-      ) : (
-        <video
-          src={selectedMedia.src}
-          className="modal-video"
-          controls
-          autoPlay
-        ></video>
+        <div className="modal" onClick={closeModal}>
+          <div className="modal-content">
+            {selectedMedia.type === "image" ? (
+              <img
+                src={selectedMedia.src}
+                alt="Selected"
+                className="modal-image"
+              />
+            ) : (
+              <video
+                src={selectedMedia.src}
+                className="modal-video"
+                controls
+                autoPlay
+              ></video>
+            )}
+          </div>
+        </div>
       )}
-    </div>
-  </div>
-)}
-
     </div>
   );
 };

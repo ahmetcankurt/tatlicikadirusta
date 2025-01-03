@@ -26,6 +26,15 @@ function Footer() {
             <FaTwitter />
           </a>
         </div>
+        <h3
+          className="header_title mx-4"
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
+          LOKMACI KADİR USTA
+        </h3>
         <p className="footer_text">
           © 2025 Antalya Hayır Lokmacısı. Tüm hakları saklıdır.
         </p>
