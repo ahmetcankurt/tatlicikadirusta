@@ -19,8 +19,8 @@
   .loading-container .spinner {
     width: 50px;
     height: 50px;
-    border: 6px solid #f4a261; /* Lokma rengi */
-    border-top: 6px solid #2a9d8f; /* Dönen üst renk */
+    border: 6px solid  #f60e0a; /* Lokma rengi */
+    border-top: 6px solid white;   /* Dönen üst renk */
     border-radius: 50%;
     animation: spin 1s linear infinite;
   }
@@ -72,7 +72,7 @@
     display: inline-block;
     animation: waveEffect 1s ease-in-out infinite;
     font-size: 36px;
-    color: #f4a261;
+    color:  #f60e0a;
     font-family: 'Courier New', Courier, monospace;
   }
   

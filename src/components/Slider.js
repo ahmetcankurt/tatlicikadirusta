@@ -1,6 +1,6 @@
 import { useState, useEffect, memo } from "react";
 import AOS from "aos"; // AOS kütüphanesini import et
-import useMobileMode from '../hook/useMobileMode'; // Mobil mod kontrol hook'u
+import useMobileMode from "../hook/useMobileMode"; // Mobil mod kontrol hook'u
 
 import Resim1 from "../image/tatliresimleri1.webp";
 import Resim2 from "../image/tatliresimleri2.webp";
@@ -16,16 +16,56 @@ import Resim10 from "../image/tatliresimleri10.webp";
 import "./Slider.css"; // Stil dosyası
 
 const slides = [
-  { image: Resim1, title: "ANTALYA HAYIR LOKMACISI", description: "Birinci açıklama" },
-  { image: Resim2, title: "ANTALYA HAYIR LOKMASI İMALAT VE DAĞITIM", description: "İkinci açıklama" },
-  { image: Resim3, title: "ANTALYA AŞURE İMALAT VE DAĞITIMI", description: "Üçüncü açıklama" },
-  { image: Resim4, title: "ANTALYA LOKMA TATLISI İMALAT VE DAĞITIMI", description: "Dördüncü açıklama" },
-  { image: Resim5, title: "ANTALYA HAYIR LOKMACISI", description: "Beşinci açıklama" },
-  { image: Resim6, title: "ANTALYA HAYIR LOKMACISI", description: "Altıncı açıklama" },
-  { image: Resim7, title: "ANTALYA HAYIR LOKMACISI", description: "Yedinci açıklama" },
-  { image: Resim8, title: "ANTALYA HAYIR LOKMACISI", description: "Sekizinci açıklama" },
-  { image: Resim9, title: "ANTALYA HAYIR LOKMACISI", description: "Dokuzuncu açıklama" },
-  { image: Resim10, title: "ANTALYA HAYIR LOKMACISI", description: "Onuncu açıklama" },
+  {
+    image: Resim1,
+    title: "ANTALYA HAYIR LOKMACISI",
+    description: "Birinci açıklama",
+  },
+  {
+    image: Resim2,
+    title: "ANTALYA HAYIR LOKMASI İMALAT VE DAĞITIM",
+    description: "İkinci açıklama",
+  },
+  {
+    image: Resim3,
+    title: "ANTALYA AŞURE İMALAT VE DAĞITIMI",
+    description: "Üçüncü açıklama",
+  },
+  {
+    image: Resim4,
+    title: "ANTALYA LOKMA TATLISI İMALAT VE DAĞITIMI",
+    description: "Dördüncü açıklama",
+  },
+  {
+    image: Resim5,
+    title: "ANTALYA HAYIR LOKMACISI",
+    description: "Beşinci açıklama",
+  },
+  {
+    image: Resim6,
+    title: "ANTALYA HAYIR LOKMACISI",
+    description: "Altıncı açıklama",
+  },
+  {
+    image: Resim7,
+    title: "ANTALYA HAYIR LOKMACISI",
+    description: "Yedinci açıklama",
+  },
+  {
+    image: Resim8,
+    title: "ANTALYA HAYIR LOKMACISI",
+    description: "Sekizinci açıklama",
+  },
+  {
+    image: Resim9,
+    title: "ANTALYA HAYIR LOKMACISI",
+    description: "Dokuzuncu açıklama",
+  },
+  {
+    image: Resim10,
+    title: "ANTALYA HAYIR LOKMACISI",
+    description: "Onuncu açıklama",
+  },
 ];
 
 const Slider = ({ interval = 3000 }) => {
@@ -40,12 +80,16 @@ const Slider = ({ interval = 3000 }) => {
   }, [currentIndex]);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + (isMobile ? 1 : 2)) % slides.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex + (isMobile ? 1 : 2)) % slides.length
+    );
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - (isMobile ? 1 : 2) : (prevIndex - (isMobile ? 1 : 2) + slides.length) % slides.length
+      prevIndex === 0
+        ? slides.length - (isMobile ? 1 : 2)
+        : (prevIndex - (isMobile ? 1 : 2) + slides.length) % slides.length
     );
   };
 
@@ -61,14 +105,31 @@ const Slider = ({ interval = 3000 }) => {
           className="slider-image"
           style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
         >
-          <div className="slider-title">{slides[currentIndex].title}</div>
+          <div
+            className="slider-title"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
+            {slides[currentIndex].title}
+          </div>
         </div>
         {!isMobile && (
           <div
             className="slider-image"
-            style={{ backgroundImage: `url(${slides[(currentIndex + 1) % slides.length].image})` }}
+            style={{
+              backgroundImage: `url(${
+                slides[(currentIndex + 1) % slides.length].image
+              })`,
+            }}
           >
-            <div className="slider-title">{slides[(currentIndex + 1) % slides.length].title}</div>
+            <div className="slider-title"
+             data-aos="fade-down"
+             data-aos-easing="linear"
+             data-aos-duration="1000"
+             >
+              {slides[(currentIndex + 1) % slides.length].title}
+            </div>
           </div>
         )}
       </div>

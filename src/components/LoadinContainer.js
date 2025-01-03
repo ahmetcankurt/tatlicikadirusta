@@ -5,7 +5,7 @@ function LoadinContainer() {
   return (
     <div className="loading-container">
       <div className="spinner"></div>
-      <p>Yükleniyor...</p>
+      {/* <p>Yükleniyor...</p> */}
       <p className="wave-text">
         {"Lokmacı Kadir Usta".split("").map((char, index) => (
           <span

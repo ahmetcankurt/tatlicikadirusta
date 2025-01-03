@@ -51,7 +51,7 @@ function ProductProcess() {
                   <div className="row">
                     {product.images.map((image, idx) => (
                       <div key={idx} className="col-md-6 col-6">
-                        <img src={image} alt={`product-${index}-${idx}`} className="product-image mt-4" />
+                        <img src={image} alt={`product-${index}-${idx}`} className="product-image mt-4" loading="lazy"/>
                       </div>
                     ))}
                   </div>

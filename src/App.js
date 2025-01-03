@@ -39,9 +39,9 @@ function App() {
           <Container>
             <Gallery />
           </Container>
-          <Container>
+          {/* <Container>
             <Sale />
-          </Container>
+          </Container> */}
           <Container>
             <Product />
           </Container>
@@ -49,9 +49,9 @@ function App() {
             <About />
           </Container>
           
-          <Container>
+          {/* <Container>
             <ProductionProcess />
-          </Container>
+          </Container> */}
           {/* <Container>
             <Map />
           </Container> */}
