@@ -2,71 +2,96 @@ import { useState, useEffect, memo } from "react";
 import AOS from "aos"; // AOS kütüphanesini import et
 import useMobileMode from "../hook/useMobileMode"; // Mobil mod kontrol hook'u
 
-import Resim1 from "../image/tatliresimleri1.webp";
-import Resim2 from "../image/tatliresimleri2.webp";
-import Resim3 from "../image/tatliresimleri3.webp";
-import Resim4 from "../image/tatliresimleri4.webp";
-import Resim5 from "../image/tatliresimleri5.webp";
-import Resim6 from "../image/tatliresimleri6.webp";
-import Resim7 from "../image/tatliresimleri7.webp";
-import Resim8 from "../image/tatliresimleri8.webp";
-import Resim9 from "../image/tatliresimleri9.webp";
-import Resim10 from "../image/tatliresimleri10.webp";
+import Resim1 from "../image/slider/resim1.jpeg";
+import Resim2 from "../image/slider/resim2.jpeg";
+import Resim3 from "../image/slider/resim3.jpeg";
+import Resim4 from "../image/slider/resim4.jpeg";
+import Resim5 from "../image/slider/resim5.jpeg";
+import Resim6 from "../image/slider/resim6.jpeg";
+import Resim7 from "../image/slider/resim7.jpeg";
+import Resim8 from "../image/slider/resim8.jpeg";
+import Resim9 from "../image/slider/resim9.jpeg";
+import Resim10 from "../image/slider/resim10.jpeg";
+import Resim11 from "../image/slider/resim11.jpeg";
+import Resim12 from "../image/slider/resim12.jpeg";
+import Resim13 from "../image/slider/resim13.jpeg";
+import Resim14 from "../image/slider/resim14.jpeg";
 
 import "./Slider.css"; // Stil dosyası
 
 const slides = [
   {
     image: Resim1,
-    title: "ANTALYA HAYIR LOKMACISI",
+    title: "Antalya'da Geleneksel Tatlı Keyfi: Hayır Lokması",
     description: "Birinci açıklama",
   },
   {
     image: Resim2,
-    title: "ANTALYA HAYIR LOKMASI İMALAT VE DAĞITIM",
+    title: "Hayır Lokması: İyi Dileklerin Tatlı Sembolü",
     description: "İkinci açıklama",
   },
   {
     image: Resim3,
-    title: "ANTALYA AŞURE İMALAT VE DAĞITIMI",
+    title: "Aşure ve Hayır Lokmasıyla Gönüllere Dokunun",
     description: "Üçüncü açıklama",
   },
   {
     image: Resim4,
-    title: "ANTALYA LOKMA TATLISI İMALAT VE DAĞITIMI",
+    title: "Tatlı Anılar İçin Antalya Lokma Dağıtımı",
     description: "Dördüncü açıklama",
   },
   {
     image: Resim5,
-    title: "ANTALYA HAYIR LOKMACISI",
+    title: "Hayır Lokması ile Düğün ve Organizasyonlar Daha Tatlı",
     description: "Beşinci açıklama",
   },
   {
     image: Resim6,
-    title: "ANTALYA HAYIR LOKMACISI",
+    title: "Sıcak Lokmalarla Sevgi Dağıtıyoruz",
     description: "Altıncı açıklama",
   },
   {
     image: Resim7,
-    title: "ANTALYA HAYIR LOKMACISI",
+    title: "Antalya’nın En Lezzetli Hayır Lokmacısı",
     description: "Yedinci açıklama",
   },
   {
     image: Resim8,
-    title: "ANTALYA HAYIR LOKMACISI",
+    title: "Özel Günlerinizi Lokma Tatlısıyla Taçlandırın",
     description: "Sekizinci açıklama",
   },
   {
     image: Resim9,
-    title: "ANTALYA HAYIR LOKMACISI",
+    title: "Gelenekten Geleceğe: Lokma İmalat ve Dağıtımı",
     description: "Dokuzuncu açıklama",
   },
   {
     image: Resim10,
-    title: "ANTALYA HAYIR LOKMACISI",
+    title: "Sıcak Lokmalar, Mutlu Kalpler",
     description: "Onuncu açıklama",
   },
+  {
+    image: Resim11,
+    title: "Lezzetin ve Sevginin Buluşma Noktası",
+    description: "On birinci açıklama",
+  },
+  {
+    image: Resim12,
+    title: "Lokma Tadıyla Antalya'nın Her Köşesine Sevgi Dağıtıyoruz",
+    description: "On ikinci açıklama",
+  },
+  {
+    image: Resim13,
+    title: "Hayır Lokması: Tatlı Bir Geleneği Yaşatıyoruz",
+    description: "On üçüncü açıklama",
+  },
+  {
+    image: Resim14,
+    title: "Organizasyonlarınız için Özel Lokma Hizmeti",
+    description: "On dördüncü açıklama",
+  },
 ];
+
 
 const Slider = ({ interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

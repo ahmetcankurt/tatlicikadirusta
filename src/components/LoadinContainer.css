@@ -64,8 +64,8 @@
   
   /* Dalga efekti */
   .wave-text {
-    display: inline-block;
     font-weight: bold;
+    text-align: center;
   }
   
   .wave-text span {

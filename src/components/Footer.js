@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa"; // İkonları import ettik
+import { FaPhoneAlt, FaInstagram, FaFacebook } from "react-icons/fa";
 import "./Footer.css"; // Footer bileşenine ait stilleri import ettik
 
 function Footer() {
@@ -8,22 +8,14 @@ function Footer() {
       <div className="footer">
         <div className="footer_social">
           <a
-            href="https://www.instagram.com/antalyahayirlokmacisi/"
+            href="https://www.instagram.com/lokmaci_kadir_usta/"
             className="social"
           >
             <FaInstagram />
           </a>
-          <a
-            href="https://www.facebook.com/antalyahayirlokmacisi"
-            className="social"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://twitter.com/antalyahayirlokmacisi"
-            className="social"
-          >
-            <FaTwitter />
+          <a href="tel:+0905525030407" className="social ">
+            <FaPhoneAlt className="me-4 phone-shake" />
+            <span className="phone-icon">0552 503 04 07 </span>
           </a>
         </div>
         <h3

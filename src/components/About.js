@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import UstaResim from "../image/ustaresim.webp";
+import Galeri24 from "../image/gallery/galeri-24.jpeg";
 import "./About.css";
 
 function About() {
@@ -11,7 +11,7 @@ function About() {
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         >
-          <img src={UstaResim} className="img-fluid" alt="Hakkımızda"   loading="lazy"/>
+          <img src={Galeri24} className="img-fluid" alt="Hakkımızda"   loading="lazy"/>
         </div>
         <div className="col-md-6" data-aos="fade-up-right">
           <p className="about-text" >

@@ -36,12 +36,43 @@ import Galeri32 from "../image/gallery/galeri-32.mp4";
 import Galeri33 from "../image/gallery/galeri-33.jpeg";
 import Galeri34 from "../image/gallery/galeri-34.mp4";
 
+import Galeri35 from "../image/gallery/galeri-48.mp4";
+import Galeri36 from "../image/gallery/galeri-36.jpeg";
+import Galeri37 from "../image/gallery/galeri-37.jpeg";
+import Galeri38 from "../image/gallery/galeri-38.mp4";
+import Galeri39 from "../image/gallery/galeri-39.jpeg";
+import Galeri40 from "../image/gallery/galeri-40.jpeg";
+import Galeri41 from "../image/gallery/galeri-41.jpeg";
+import Galeri42  from "../image/gallery/galeri-43.jpeg";
+import Galeri43 from "../image/gallery/galeri-46.mp4";
+import Galeri44 from "../image/gallery/galeri-44.jpeg";
+import Galeri45 from "../image/gallery/galeri-45.jpeg";
+import Galeri46 from "../image/gallery/galeri-42.jpeg";
+import Galeri47 from "../image/gallery/galeri-47.mp4";
+import Galeri48 from "../image/gallery/galeri-35.jpeg";
+
+
+
+import Resim1 from "../image/slider/resim1.jpeg";
+import Resim2 from "../image/slider/resim2.jpeg";
+import Resim3 from "../image/slider/resim3.jpeg";
+import Resim4 from "../image/slider/resim4.jpeg";
+import Resim5 from "../image/slider/resim5.jpeg";
+import Resim6 from "../image/slider/resim6.jpeg";
+import Resim7 from "../image/slider/resim7.jpeg";
+import Resim8 from "../image/slider/resim8.jpeg";
+import Resim9 from "../image/slider/resim9.jpeg";
+import Resim10 from "../image/slider/resim10.jpeg";
+import Resim11 from "../image/slider/resim11.jpeg";
+import Resim12 from "../image/slider/resim12.jpeg";
+import Resim13 from "../image/slider/resim13.jpeg";
+import Resim14 from "../image/slider/resim14.jpeg";
+
 const Gallery = () => {
   const media = [
     { src: Galeri1, type: "image" },
     { src: Galeri2, type: "image" },
     { src: Galeri3, type: "image" },
-    { src: Galeri4, type: "image" },
     { src: Galeri5, type: "image" },
     { src: Galeri6, type: "image" },
     { src: Galeri7, type: "image" },
@@ -72,6 +103,38 @@ const Gallery = () => {
     { src: Galeri32, type: "video" },
     { src: Galeri33, type: "image" },
     { src: Galeri34, type: "video" },
+    { src: Galeri35, type: "video" },
+    { src: Galeri36, type: "image" },
+    { src: Galeri37, type: "image" },
+    { src: Galeri38, type: "video" },
+    { src: Galeri39, type: "image" },
+    { src: Galeri40, type: "image" },
+    { src: Galeri41, type: "image" },
+    { src: Galeri42, type: "image" },
+    { src: Galeri43, type: "image" },
+    { src: Galeri44, type: "image" },
+    { src: Galeri45, type: "image" },
+    { src: Galeri46, type: "image" },
+    { src: Galeri47, type: "video" },
+    { src: Galeri48, type: "image" },
+
+
+
+    { src: Resim1, type: "image" },
+    { src: Resim2, type: "image" },
+    { src: Resim3, type: "image" },
+    { src: Resim4, type: "image" },
+    { src: Resim5, type: "image" },
+    { src: Resim6, type: "image" },
+    { src: Resim7, type: "image" },
+    { src: Resim8, type: "image" },
+    { src: Resim9, type: "image" },
+    { src: Resim10, type: "image" },
+    { src: Resim11, type: "image" },
+    { src: Resim12, type: "image" },
+    { src: Resim13, type: "image" },
+    { src: Resim14, type: "image" },
+
   ];
   const [selectedMedia, setSelectedMedia] = useState(null);
 
@@ -89,7 +152,7 @@ const Gallery = () => {
         ~ Galeri ~
       </h2>
       <div className="gallery-grid">
-        {media.map((item, index) => (
+        {media.reverse().map((item, index) => (
           <div
             key={index}
             className="gallery-item"

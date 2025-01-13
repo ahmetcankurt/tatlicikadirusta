@@ -33,6 +33,19 @@ function App() {
         <>
           <Header />
           <Slider />
+          <p className="wave-text mt-5" >
+            {"Lokmacı Kadir Usta".split("").map((char, index) => (
+              <span
+                key={index}
+                style={{
+                  animationDelay: `${index * 0.09}s`,
+                  fontSize:35
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
+          </p>
           <Container>
             <ProductsPromotion />
           </Container>
@@ -48,7 +61,7 @@ function App() {
           <Container>
             <About />
           </Container>
-          
+
           <Container>
             <ProductionProcess />
           </Container>
