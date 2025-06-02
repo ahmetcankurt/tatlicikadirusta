@@ -64,11 +64,20 @@ a:hover {
   
 }
 
-
 .shape {
-  bottom: -75px;
   position: absolute;
+  bottom: -65px;
+  left: 0;       /* Sol tarafa yasla */
+  max-width: 100%; /* Görsel ekranı aşmasın */
+  height: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .shape {
+    bottom: -10px; /* Mobilde biraz daha yukarı al */
+  }
+}
+
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

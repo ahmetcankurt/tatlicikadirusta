@@ -39,16 +39,16 @@ function App() {
           </div>
           <Container>
             <ProductsPromotion />
-          </Container>
-          <Container>
+          </Container> 
+           <Container>
             <Gallery />
           </Container>
-          <Container>
+           <Container>
             <About />
-          </Container>
-            <Map />
-          <WhatsappButton />
-          <Footer />
+          </Container> 
+             <Map /> 
+          <WhatsappButton /> 
+          <Footer /> 
           <ScrollToDownIcon />
         </>
       )}
