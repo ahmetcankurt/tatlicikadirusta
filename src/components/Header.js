@@ -23,17 +23,12 @@ function Header() {
         >
           <a
             href="https://www.instagram.com/lokmaci_kadir_usta/"
-            className="social"
+            className="social social-header"
           >
             <RiInstagramFill />
           </a>
-          {/* <a
-            href="https://www.facebook.com/antalyahayirlokmacisi"
-            className="social"
-          >
-            <FaFacebook />
-          </a> */}
-          <a href="tel:+0905525030407" className="social ">
+      
+          <a href="tel:+0905525030407" className="social social-header">
             <FaPhoneAlt className="me-4 phone-shake" />
             <span className="phone-icon">0552 503 04 07 </span>
           </a>

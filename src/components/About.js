@@ -13,7 +13,7 @@ function About() {
         >
           <img src={Galeri24} className="img-fluid" alt="Hakkımızda"   loading="lazy"/>
         </div>
-        <div className="col-md-6" data-aos="fade-up-right">
+        <div className="col-md-6" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <p className="about-text" >
             Kadir Usta, okul hayatından iş yaşamına uzanan yolculuğunda
             hayalindeki mesleğe 2011 yılında adım atmıştır. Uzun yıllar boyunca

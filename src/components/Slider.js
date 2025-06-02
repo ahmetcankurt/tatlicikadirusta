@@ -42,7 +42,7 @@ const slides = [
   },
   {
     image: Resim5,
-    title: "Hayır Lokması ile Düğün ve Organizasyonlar Daha Tatlı",
+    title: "Hayır Lokması ile Düğün ve Organizasyonları",
     description: "Beşinci açıklama",
   },
   {
@@ -50,11 +50,7 @@ const slides = [
     title: "Sıcak Lokmalarla Sevgi Dağıtıyoruz",
     description: "Altıncı açıklama",
   },
-  {
-    image: Resim7,
-    title: "Antalya’nın En Lezzetli Hayır Lokmacısı",
-    description: "Yedinci açıklama",
-  },
+ 
   {
     image: Resim8,
     title: "Özel Günlerinizi Lokma Tatlısıyla Taçlandırın",
@@ -62,7 +58,7 @@ const slides = [
   },
   {
     image: Resim9,
-    title: "Gelenekten Geleceğe: Lokma İmalat ve Dağıtımı",
+    title: "Gelenekten Geleceğe: Pişi İmalat ve Dağıtımı",
     description: "Dokuzuncu açıklama",
   },
   {
@@ -95,82 +91,90 @@ const slides = [
 
 const Slider = ({ interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const isMobile = useMobileMode(); // Mobil mod kontrolü
+  const [transitioning, setTransitioning] = useState(false);
+  const isMobile = useMobileMode();
 
   useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false
+    });
+    
     const timer = setInterval(() => {
-      handleNext();
+      if (!transitioning) {
+        handleNext();
+      }
     }, interval);
+    
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [currentIndex, transitioning]);
+
+  const goToSlide = (newIndex) => {
+    setTransitioning(true);
+    setCurrentIndex(newIndex);
+    
+    // Geçiş tamamlandıktan sonra durumu sıfırla
+    setTimeout(() => {
+      setTransitioning(false);
+    }, 800);
+  };
 
   const handleNext = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex + (isMobile ? 1 : 2)) % slides.length
-    );
+    const nextIndex = (currentIndex + (isMobile ? 1 : 2)) % slides.length;
+    goToSlide(nextIndex);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0
-        ? slides.length - (isMobile ? 1 : 2)
-        : (prevIndex - (isMobile ? 1 : 2) + slides.length) % slides.length
-    );
+    const prevIndex = currentIndex === 0 
+      ? slides.length - (isMobile ? 1 : 2) 
+      : (currentIndex - (isMobile ? 1 : 2) + slides.length) % slides.length;
+    goToSlide(prevIndex);
   };
-
-  useEffect(() => {
-    AOS.init(); // AOS kütüphanesini başlat
-    AOS.refresh(); // Bileşen yeniden render edildikçe AOS'u yenileyin
-  }, []);
 
   return (
     <div className="slider-container">
-      <div className="slider-slide">
-        <div
-          className="slider-image"
-          style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
-        >
+      <div 
+        className={`slider-slide ${transitioning ? 'transitioning' : ''}`}
+        style={{
+          transform: isMobile 
+            ? `translateX(-${currentIndex * 100}%)`
+            : `translateX(-${currentIndex * 50}%)`
+        }}
+      >
+        {slides.map((slide, index) => (
           <div
-            className="slider-title"
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            {slides[currentIndex].title}
-          </div>
-        </div>
-        {!isMobile && (
-          <div
+            key={index}
             className="slider-image"
-            style={{
-              backgroundImage: `url(${
-                slides[(currentIndex + 1) % slides.length].image
-              })`,
-            }}
+            style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="slider-title"
-             data-aos="fade-down"
-             data-aos-easing="linear"
-             data-aos-duration="1000"
-             >
-              {slides[(currentIndex + 1) % slides.length].title}
+            <div
+              className="slider-title"
+              data-aos="fade-down"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+            >
+              {slide.title}
             </div>
           </div>
-        )}
+        ))}
       </div>
+      
       <button
-        className="slider-btn prev-btn "
-        data-aos="fade-left"
-        delay="300"
+        className="slider-btn prev-btn"
         onClick={handlePrev}
+        disabled={transitioning}
+        data-aos="fade-left"
+        data-aos-delay="300"
       >
         ❮
       </button>
       <button
         className="slider-btn next-btn"
-        data-aos="fade-right"
-        delay="300"
         onClick={handleNext}
+        disabled={transitioning}
+        data-aos="fade-right"
+        data-aos-delay="300"
       >
         ❯
       </button>

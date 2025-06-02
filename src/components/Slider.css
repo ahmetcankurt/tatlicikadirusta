@@ -1,20 +1,25 @@
+/* Slider.css */
 .slider-container {
   position: relative;
   width: 100%;
   margin: auto;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
 }
 
 .slider-slide {
   display: flex;
-  justify-content: space-between;
   height: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.slider-slide.transitioning {
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .slider-image {
-  flex: 1;
+  flex: 0 0 100%;
+  min-width: 0;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -28,19 +33,21 @@
   font-size: 24px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  justify-content: center;
+  text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
   text-align: center;
   left: 0;
   right: 0;
   top: 0;
+  transition: all 0.5s ease;
 }
 
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #dc143c;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   color: white;
   border: none;
   border-radius: 50%;
@@ -49,32 +56,47 @@
   font-size: 20px;
   cursor: pointer;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-.slider-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.slider-btn:hover:not(:disabled) {
+  background-color: #dc143c;
+  color: white;
+  box-shadow: rgba(220, 20, 60, 0.6) 0px 5px 15px;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .prev-btn {
-  left: 10px;
+  left: 20px;
 }
 
 .next-btn {
-  right: 10px;
+  right: 20px;
 }
 
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+  .slider-image {
+    flex: 0 0 50%;
+  }
+}
+
+/* Mobile Styles */
 @media screen and (max-width: 768px) {
   .slider-image {
-    margin: 0 2px;
-    object-fit: cover;
     height: 450px;
   }
+  
   .slider-title {
     font-size: 18px;
-    justify-content: center;
-    text-align: center;
-    left: 0;
-    right: 0;
-    top: 0;
+    padding: 8px;
   }
 }

@@ -2,6 +2,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "aos/dist/aos.css"; // AOS CSS dosyasını import et
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+// App.js veya index.js içerisine ekleyebilirsin
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

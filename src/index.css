@@ -6,6 +6,8 @@ body {
   padding: 0;
   height: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color:  white;
 }
 
 h1 {
@@ -17,11 +19,18 @@ a {
   text-decoration: none;
   color: white;
   font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  /* background-color: red; */
+  color: red!important /* Link hover rengi */
+  /* transition: color 0.3s ease; */
 }
 
 /* a:hover {
   color:#f4a261; 
-} */
+}  */
 
 .blok_title {
   text-align: center;
@@ -32,5 +41,43 @@ a {
 @media screen and (max-width: 768px) {
   .blok_title {
     font-size: 1.5rem;
+  }
+}
+/* Dalga efekti */
+.lokmaci-text {
+  font-weight: bold;
+  text-align: center;
+}
+
+.lokmaci-text span {
+  display: inline-block;
+  animation: waveEffect 1s ease-in-out infinite;
+  font-size: 36px;
+  color:  #f60e0a;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 768px) {
+  .lokmaci-text span {
+    font-size: 26px;
+  }
+  
+}
+
+
+.shape {
+  bottom: -75px;
+  position: absolute;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(5px);
   }
 }

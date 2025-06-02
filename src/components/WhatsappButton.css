@@ -22,9 +22,9 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.fixed_buttons a.phone_button {
-  background-color: #007bff; /* Telefon ikonu için mavi */
-}
+/* .fixed_buttons a.phone_button {
+  background-color: #007bff; 
+} */
 
 .fixed_buttons a:hover {
   transform: scale(1.1);

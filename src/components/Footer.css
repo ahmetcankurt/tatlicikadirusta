@@ -1,21 +1,96 @@
-
+/* Footer.css */
 .footer {
-    background-color: #dc143c ;
-    color: rgb(207, 212, 223);
-    text-align: center;
-    padding: 60px 0px;
-    font-size: 14px;
+  position: relative;
+  color: rgb(207, 212, 223);
+  text-align: center;
+  padding: 120px 0; /* Daha uzun yapmak için padding artırıldı */
+  font-size: 16px; /* Temel font boyutu artırıldı */
+  background: 
+    linear-gradient(45deg, rgba(246, 14, 10, 0.9), rgba(201, 66, 64, 0.9), rgba(246, 14, 10, 0.9)),
+    url('../image/shape/shape8.png') center/cover no-repeat;
+  background-blend-mode: overlay;
+  animation: gradient-slide 150s infinite ease-in-out;
+  overflow: hidden;
+  min-height: 60vh; /* Minimum yükseklik ekledik */
+}
+
+.footer-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer_social {
+  display: flex;
+  gap: 30px; /* Boşluk artırıldı */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; /* Alt boşluk artırıldı */
+}
+
+
+
+.footer_title {
+  font-size: 24px; /* Başlık boyutu artırıldı */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f60e0a;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+
+.footer_text {
+  background-color: white;
+  font-size: 18px; /* Metin boyutu artırıldı */
+  color: #f60e0a;
+  margin-top: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+.phone-shake {
+  animation: shake 2s infinite;
+}
+
+.phone-text {
+  font-size: 20px; /* Telefon yazı boyutu artırıldı */
+  font-weight: 600;
+}
+
+.footer_justify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Diğer animasyonlar aynı kalıyor */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  2% { transform: rotate(-15deg); }
+  4% { transform: rotate(5deg); }
+  6% { transform: rotate(-15deg); }
+  8% { transform: rotate(5deg); }
+  10% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .footer_social {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .footer_text  {
-    font-size: 14px;
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
-    font-weight: bold;
+  100% {
+    background-position: 0% 50%;
   }
+}
