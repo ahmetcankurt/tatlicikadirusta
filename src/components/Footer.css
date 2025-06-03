@@ -12,6 +12,10 @@
   animation: gradient-slide 150s infinite ease-in-out;
   overflow: hidden;
   min-height: 60vh; /* Minimum yükseklik ekledik */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer-overlay {

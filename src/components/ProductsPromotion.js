@@ -22,8 +22,8 @@ function ProductsPromotion() {
     { title: "Pişi", description: "Şekerli Yumurtalı Hamur", imgUrl: Pisi },
     { title: "Aşure", description: "Buğday Nohut Kuru fasulye Şeker Su", imgUrl: Asure },
     { title: "İrmik Helvası", description: "Buğday Nohut Kuru fasulye Şeker Su", imgUrl: IrmikHelvası },
-    { title:  "Dondurma" , description: "Süt Şeker Krema", imgUrl : Dondurma },
-    { title:  "Simit",  description: "Un Su Tuz", imgUrl : Simit },
+    { title: "Dondurma", description: "Süt Şeker Krema", imgUrl: Dondurma },
+    { title: "Simit", description: "Un Su Tuz", imgUrl: Simit },
   ];
 
 
@@ -38,7 +38,7 @@ function ProductsPromotion() {
       <div className="row">
         <h2 className="blok_title" data-aos="fade-up">~ Ürünlerimiz ~</h2>
         {products.map((product, index) => (
-          <div className="col-md-4 products mb-4" key={index} data-aos="flip-left" data-aos-delay={index * 100}>
+          <div className="col-md-4 products mb-4" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
             <div className="card boxShadow">
               <img src={product.imgUrl} className="card-img-top" alt={product.title} loading="lazy" />
               <div className="card-body text-center">

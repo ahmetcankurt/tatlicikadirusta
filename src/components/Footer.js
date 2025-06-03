@@ -6,7 +6,6 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer ">
-      <div className="footer-overlay">
         <div className="footer_social">
           <a
             href="https://www.instagram.com/lokmaci_kadir_usta/"
@@ -21,13 +20,10 @@ function Footer() {
             <span className="phone-text">0552 503 04 07</span>
           </a>
         </div>
-        <div className="footer_justify">
-          <span className="footer_title mb-1">LOKMACI KADİR USTA</span>
-          <span className="footer_text">
+          <span className="footer_title ">LOKMACI KADİR USTA</span>
+          {/* <span className="footer_text">
             © {new Date().getFullYear()} Antalya Hayır Lokmacısı. Tüm hakları saklıdır.
-          </span>
-        </div>
-      </div>
+          </span> */}
     </footer>
   );
 }

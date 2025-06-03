@@ -24,7 +24,7 @@ const WhatsappButton = () => {
         data-aos-anchor="#example-anchor"
         data-aos-duration="850"
       >
-        <FaPhoneAlt />
+        <FaPhoneAlt className="phone-shake" />
       </a>
     </div>
   );

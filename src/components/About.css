@@ -16,8 +16,9 @@
     padding: 10px;
     background-color: #fdfdfd;
     border-left: 5px solid #f60e0a;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
 }
 
 .blok_title {
